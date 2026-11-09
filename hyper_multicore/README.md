@@ -10,6 +10,7 @@ SHMEM 由 Multicore 在内部管理，不提供独立用户接口。
 - [MegaKernel Profiling 使用与设计](../docs/profiling.md)
 - [私有 SHMEM 生命周期](../docs/shmem.md)
 - [独立 MegaMoE 样例](../examples/mega_moe_minimal.py)
+- [MegaMoe 路由端点与 shared expert 融合](../docs/mega_moe_route_fusion.md)
 
 ## 核心概念
 
@@ -164,6 +165,11 @@ experts = MegaMoeExperts(
 
 output = experts(hidden_states, topk_ids, topk_weights)
 ```
+
+permute / unpermute 与 shared expert 可按正反向独立选择，默认保留外部端点路径。
+设置正的 `shared_intermediate_size` 后，可用 `fusion_mode="full"` 开启全部融合；
+自动 token 接口不变。开关、权重布局、动态输入及最终相加的边界见
+[融合使用说明](../docs/mega_moe_route_fusion.md)。
 
 `ep_group` may also be a PP/DP-local EP subgroup; `ep_size` is inferred from it.
 If supplied explicitly, `ep_size` must match the group size.
