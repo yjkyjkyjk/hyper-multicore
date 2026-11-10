@@ -159,8 +159,26 @@ def build_config_for_rank(graph: ComputeGraph, tsv: TaskSplitValue, rank_id: int
     cfg.task_num = task_num_all
     cfg.atomic_add_values[0] = 1
     configure_ready_handshake(cfg, tsv)
+    _apply_core_partition_experiment(cfg)
     validate_runtime_config(cfg, tsv, num_cube_cores)
     return cfg
+
+
+def _apply_core_partition_experiment(cfg: RuntimeConfigC) -> None:
+    """Select the isolated forward-only scheduling experiment."""
+    mode = os.getenv("HP_MEGA_MOE_CORE_PARTITION", "baseline")
+    if mode not in ("baseline", "vector", "cube", "both"):
+        raise ValueError(f"invalid core partition experiment: {mode!r}")
+    if mode in ("cube", "both"):
+        from hyper_multicore.modules.mega_moe.cube_partition_experiment import (
+            partition_cube_up_workers,
+        )
+        partition_cube_up_workers(cfg)
+    if mode in ("vector", "both"):
+        from hyper_multicore.modules.mega_moe.vector_partition_experiment import (
+            partition_vector_workers,
+        )
+        partition_vector_workers(cfg)
 
 
 def write_bin(path: str, data: bytes) -> None:

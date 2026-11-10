@@ -42,6 +42,7 @@ DEFAULT_DEPENDENCY_POLL_INTERVAL_US = 0
 FAST_DEPENDENCY_POLL_INTERVAL_US = 5
 EVENT_INVALID_ID         = 0xFFFFFFFF
 RUNTIME_PROTOCOL_VERSION = 1
+VECTOR_PARTITION_MAGIC = 0x56504331
 
 
 def mega_moe_event_capacity(
@@ -240,6 +241,16 @@ class RuntimeConfigC(ctypes.Structure):
         ("shared_tiling", ctypes.c_uint64),
         ("_padding", ctypes.c_uint32 * 2),
     ]
+
+
+def vector_partition_task_count(cfg: RuntimeConfigC) -> int | None:
+    """Return the experimental communication prefix length, when enabled."""
+    if cfg._padding[1] != VECTOR_PARTITION_MAGIC:
+        return None
+    count = int(cfg._padding[0])
+    if not 0 <= count <= cfg.task_index_num[1]:
+        raise ValueError("Vector communication prefix exceeds the scheduled queue")
+    return count
 
 
 class TilingDataC(ctypes.Structure):

@@ -29,6 +29,7 @@ from hyper_multicore.scheduler.config import (
     RuntimeConfigC,
     TaskAiCoreType,
     TensorDescC,
+    vector_partition_task_count,
 )
 
 
@@ -203,6 +204,7 @@ def _task_locations(
     active_core_count = int(runtime_config.num_workers) if broadcast_tasks else int(runtime_config.num_workers) // 2
     if active_core_count <= 0:
         raise ValueError("L1 dump requires RuntimeConfig.num_workers to identify active AIC/AIV workers")
+    communication_tasks = vector_partition_task_count(runtime_config)
     schedules = (
         (
             TaskAiCoreType.TASK_AICORE_CUBE,
@@ -232,10 +234,15 @@ def _task_locations(
                 continue
             worker_count = (int(runtime_config.num_workers) // vector_worker_stride
                             if core_type == TaskAiCoreType.TASK_AICORE_VECTOR else active_core_count)
+            core_id = schedule_index % worker_count
+            if core_type == TaskAiCoreType.TASK_AICORE_VECTOR and communication_tasks is not None:
+                communication = schedule_index < communication_tasks
+                local_index = schedule_index if communication else schedule_index - communication_tasks
+                core_id = 2 * (local_index % active_core_count) + int(communication)
             location = _L1TaskLocation(
                 task_id=task_id,
                 core_type=_CORE_TYPE_NAMES[core_type],
-                core_id=schedule_index % worker_count,
+                core_id=core_id,
             )
             previous = locations.setdefault(task_id, location)
             if previous != location:

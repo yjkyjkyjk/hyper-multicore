@@ -147,6 +147,21 @@ class KernelWorkerBase {
     this->vector_num = getNumWorkers(this->runtimeConfigPtr);
     this->core_num = this->vector_num / 2;
     this->active_vector_num = WorkerPolicy == VectorWorkerPolicy::ALL ? this->vector_num : this->vector_num / 2;
+    this->vector_partition_ = hasVectorPartition(runtimeConfigPtr);
+    if (this->vector_partition_) {
+      uint32_t communication_tasks = getVectorCommunicationTaskCount(runtimeConfigPtr);
+      if (communication_tasks > static_cast<uint32_t>(this->vector_task_num)) {
+        AscendC::Trap();
+      }
+#ifndef __DAV_C220_CUBE__
+      this->active_vector_num = this->core_num;
+      if (this->worker_id_ % 2 == 1) {
+        this->vector_task_num = communication_tasks;
+      } else {
+        this->vector_queue_start_ = communication_tasks;
+      }
+#endif
+    }
   }
 
   __aicore__ inline void Process() {
@@ -311,7 +326,7 @@ class KernelWorkerBase {
 
   __aicore__ inline void CompleteDeviceReads(const ReadyHandshakeMeta &meta) {
 #ifndef __DAV_C220_CUBE__
-    if (this->worker_id_ % 2 == 0) {
+    if (!this->vector_partition_ && this->worker_id_ % 2 == 0) {
       return;
     }
 #endif
@@ -476,7 +491,7 @@ class KernelWorkerBase {
 #ifdef __DAV_C220_CUBE__
     WaitForDependency(meta.ready_event);
 #else
-    if (this->worker_id_ % VECTOR_WORKER_STRIDE == 0) {
+    if (!this->vector_partition_ && this->worker_id_ % VECTOR_WORKER_STRIDE == 0) {
       return;
     }
     if (this->worker_id_ == 1) {
@@ -495,6 +510,11 @@ class KernelWorkerBase {
   }
 
   __aicore__ inline uint32_t GetVectorScheduleIndex() {
+    if (this->vector_partition_) {
+      return this->worker_id_ < this->vector_num
+               ? this->vector_queue_start_ + this->worker_id_ / 2
+               : INVALID_VECTOR_SCHEDULE_INDEX;
+    }
     if constexpr (WorkerPolicy == VectorWorkerPolicy::ALL) {
       return this->worker_id_ < this->active_vector_num ? this->worker_id_ : INVALID_VECTOR_SCHEDULE_INDEX;
     }
@@ -653,6 +673,8 @@ class KernelWorkerBase {
   __aicore__ inline void TriggerEvent(uint32_t event_index) { AtomicAddForAllEventCounters(event_index); }
 
   bool pull_protocol_ = false;
+  bool vector_partition_ = false;
+  uint32_t vector_queue_start_ = 0;
   uint32_t worker_id_ = 0;
   uint32_t grouped_matmul_group_list_offset_ = 0;
   uint32_t task_num = 0;

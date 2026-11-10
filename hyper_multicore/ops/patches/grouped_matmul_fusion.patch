@@ -1,5 +1,5 @@
 diff --git a/gmm/grouped_matmul/op_kernel/grouped_matmul.cpp b/gmm/grouped_matmul/op_kernel/grouped_matmul.cpp
-index fbd7b6c..13692ca 100644
+index fbd7b6c..cc50da8 100644
 --- a/gmm/grouped_matmul/op_kernel/grouped_matmul.cpp
 +++ b/gmm/grouped_matmul/op_kernel/grouped_matmul.cpp
 @@ -15,7 +15,7 @@
@@ -36,7 +36,17 @@ index fbd7b6c..13692ca 100644
 
  namespace {
      __aicore__ inline static constexpr MatmulApiStaticTiling GetGmmMatmulApiTiling(bool isND2NZ, bool transB) {
-@@ -379,18 +379,26 @@ namespace {
+@@ -187,6 +187,9 @@ namespace {
+                        y, user1,  &gmmBaseParams_, &mmTilingData_, &tPipe);                                        \
+         processClass<decltype(computeOp)> op(computeOp);                                                           \
+         op.Init(&gmmBaseParams_, &mmTilingData_, gmmArrayAddr_, groupList, tiling);                                \
++        if (logicalCoreIndex != 0xFFFFFFFFU) {                                                                     \
++            op.SetLogicalCoreIndex(logicalCoreIndex);                                                              \
++        }                                                                                                          \
+         op.Process();                                                                                              \
+     } while (0)
+
+@@ -379,18 +382,27 @@ namespace {
          op.Process(workspace, &tPipe);                                                                 \
      } while (0)
 
@@ -47,7 +57,8 @@ index fbd7b6c..13692ca 100644
                                                       GM_ADDR offset, GM_ADDR antiquantScale, GM_ADDR antiquantOffset,
                                                       GM_ADDR groupList, GM_ADDR perTokenScale, GM_ADDR y,
 -                                                     GM_ADDR workspace, GM_ADDR tiling)
-+                                                     GM_ADDR workspace, GM_ADDR tiling, bool transA, bool transB)
++                                                     GM_ADDR workspace, GM_ADDR tiling, bool transA, bool transB,
++                                                     uint32_t logicalCoreIndex = 0xFFFFFFFFU)
  {
      TPipe tPipe;
      AscendCUtils::SetOverflow(1);
@@ -67,7 +78,7 @@ index fbd7b6c..13692ca 100644
  #if (defined(__CCE_AICORE__) && __CCE_AICORE__ == 220) || (defined(__NPU_ARCH__) && (__NPU_ARCH__ == 3003 || __NPU_ARCH__ == 3113))
  #if defined(GMM_ANTI_QUANT_A8W4_MSD)
      // ANTIQUANT_A8W4
-@@ -655,4 +663,5 @@ __global__ __aicore__ void grouped_matmul(GM_ADDR x, GM_ADDR weight, GM_ADDR bia
+@@ -655,4 +667,5 @@ __global__ __aicore__ void grouped_matmul(GM_ADDR x, GM_ADDR weight, GM_ADDR bia
      }
  #endif
  #endif
@@ -76,10 +87,21 @@ index fbd7b6c..13692ca 100644
 +#endif
 +}
 diff --git a/gmm/grouped_matmul/op_kernel/grouped_matmul.h b/gmm/grouped_matmul/op_kernel/grouped_matmul.h
-index 59e0f9d..5e9a7a6 100644
+index 59e0f9d..4e3ad7c 100644
 --- a/gmm/grouped_matmul/op_kernel/grouped_matmul.h
 +++ b/gmm/grouped_matmul/op_kernel/grouped_matmul.h
-@@ -474,11 +474,6 @@ __aicore__ inline void GMMCompute<mmType, sync>::Init(GM_ADDR x, GM_ADDR weight,
+@@ -138,6 +138,10 @@ class GMMProcess {
+                                 const TCubeTiling* __restrict mmTilingDataIn, TILING_TYPE* gmmArrayAddrIn,
+                                 GM_ADDR groupList, GM_ADDR tiling);
+
++    __aicore__ inline void SetLogicalCoreIndex(uint32_t logicalCoreIndex) {
++        coreIdx = logicalCoreIndex;
++    }
++
+     __aicore__ inline void InitStaticTiling(int32_t baseM, int32_t baseN);
+
+     __aicore__ inline void Process();
+@@ -474,11 +478,6 @@ __aicore__ inline void GMMCompute<mmType, sync>::Init(GM_ADDR x, GM_ADDR weight,
      LocalTensor<uint8_t> buf = ubBuf.template Get<uint8_t>();
      mm.SetLocalWorkspace(buf);
  #endif
@@ -91,7 +113,7 @@ index 59e0f9d..5e9a7a6 100644
  }
 
  template <typename mmType, bool sync>
-@@ -491,16 +486,7 @@ __aicore__ inline void GMMCompute<mmType, sync>::SetGlobalBufferBias(uint32_t gr
+@@ -490,16 +489,7 @@ __aicore__ inline void GMMCompute<mmType, sync>::SetGlobalBufferBias(uint32_t gr
          } else {
              biasGm.SetGlobalBuffer(GetTensorAddr<BiasT>(0, biasTensorPtr) + mnConfig.nAxisBaseOffset);
          }
@@ -108,7 +130,7 @@ index 59e0f9d..5e9a7a6 100644
      }
  }
 
-@@ -531,7 +517,7 @@ __aicore__ inline GlobalTensor<typename mmType::BT::T> GMMCompute<mmType, sync>:
+@@ -531,7 +521,7 @@ __aicore__ inline GlobalTensor<typename mmType::BT::T> GMMCompute<mmType, sync>:
      } else if (isA8W4FakeQuant) {
          weightGmLocal.SetGlobalBuffer(reinterpret_cast<__gm__ BT *>(weightTensorPtr) + mnConfig.wBaseOffset + wOffset);
      } else {
@@ -117,7 +139,7 @@ index 59e0f9d..5e9a7a6 100644
      }
      #if !(defined(ASCENDC_OOM) && ASCENDC_OOM == 1)
      if (mnConfig.blockDimM == 1) {
-@@ -560,12 +546,12 @@ __aicore__ inline void GMMCompute<mmType, sync>::MMCompute(
+@@ -560,12 +550,12 @@ __aicore__ inline void GMMCompute<mmType, sync>::MMCompute(
      // init global buffer
      if (singleX == 0) {
          if (groupListType == GROUP_LIST_TYPE_SPARSE && groupType == 0) { // 0: split M
@@ -133,7 +155,7 @@ index 59e0f9d..5e9a7a6 100644
      }
      GlobalTensor<BT> weightGmLocal = SetGlobalBufferW(groupIdx, tailN, mnConfig);
      mm.SetOrgShape(mnConfig.m, mnConfig.n, mnConfig.k);
-@@ -583,12 +569,12 @@ __aicore__ inline void GMMCompute<mmType, sync>::MMCompute(
+@@ -583,12 +573,12 @@ __aicore__ inline void GMMCompute<mmType, sync>::MMCompute(
      SetGlobalBufferBias(groupIdx, tailN, mnConfig);
      if (singleY == 0) {
          if (groupListType == GROUP_LIST_TYPE_SPARSE && groupType == 0) {

@@ -33,6 +33,7 @@ from hyper_multicore.scheduler.config import (
     RuntimeConfigC,
     TaskDescC,
     TaskType,
+    vector_partition_task_count,
 )
 from hyper_multicore.diagnostics.common.graph import _scheduled_task_ids
 from hyper_multicore.diagnostics.common.runtime import DiagnosticMode, PreparedDiagnosticRuntime
@@ -290,6 +291,14 @@ def _calculate_event_driven_profile_layout(
         int(runtime_config.task_index_num[1]),
         num_workers // vector_worker_stride,
     )
+    communication_tasks = vector_partition_task_count(runtime_config)
+    if communication_tasks is not None:
+        vector_tasks = list(runtime_config.vector_task_indices[:runtime_config.task_index_num[1]])
+        groups = (vector_tasks[:communication_tasks], vector_tasks[communication_tasks:])
+        aiv_required_records = max(
+            _max_worker_record_count(runtime_config, tasks, len(tasks), active_worker_count)
+            for tasks in groups
+        )
     return _ProfileLayout(
         aic_required_records=aic_required_records,
         aiv_required_records=aiv_required_records,

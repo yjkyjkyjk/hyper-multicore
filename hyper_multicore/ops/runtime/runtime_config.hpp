@@ -198,6 +198,16 @@ static_assert(sizeof(RuntimeHeader) == 64);
 static_assert(sizeof(TensorDesc) == 64);
 static_assert(sizeof(TaskDesc) == 576);
 
+constexpr uint32_t VECTOR_PARTITION_MAGIC = 0x56504331;
+
+__aicore__ inline bool hasVectorPartition(__gm__ uint8_t *runtime) {
+  return reinterpret_cast<__gm__ RuntimeHeader *>(runtime)->padding[1] == VECTOR_PARTITION_MAGIC;
+}
+
+__aicore__ inline uint32_t getVectorCommunicationTaskCount(__gm__ uint8_t *runtime) {
+  return reinterpret_cast<__gm__ RuntimeHeader *>(runtime)->padding[0];
+}
+
 __aicore__ inline __gm__ uint8_t *getSharedResource(__gm__ uint8_t *runtime, uint32_t index) {
   return reinterpret_cast<__gm__ uint8_t *>(reinterpret_cast<__gm__ uint64_t *>(runtime + 40)[index]);
 }
