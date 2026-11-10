@@ -1,0 +1,18 @@
+{
+  "passed": 800,
+  "expected_cube_rejections": 160,
+  "mode_counts": {
+    "baseline": 240,
+    "vector": 240,
+    "cube": 160,
+    "both": 160
+  },
+  "ranks_checked": 2080,
+  "tensor_kernels_executed": false,
+  "notes": [
+    "Uses actual host graph builders, serializer, profile sizing and pure L1 location function.",
+    "No Torch stub or tensor kernel execution; package initializers are bypassed.",
+    "Python 3.9 uses postponed annotation compilation without editing repository source.",
+    "Checks queue coverage, event progress, per-worker DFX capacity, L1 physical IDs, header bytes and completion."
+  ]
+}

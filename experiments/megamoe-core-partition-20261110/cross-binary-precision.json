@@ -1,0 +1,426 @@
+{
+  "passed": true,
+  "comparisons": 84,
+  "cases": [
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "output"
+    },
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 0,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "output"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 1,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "output"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 0,
+      "repeat": 2,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "output"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 0,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "output"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 1,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "output"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 1,
+      "repeat": 2,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "output"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 0,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "output"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 1,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "output"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 2,
+      "repeat": 2,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "output"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 0,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "output"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 1,
+      "tensor": "shared_down_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "output"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "input_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "route_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "gate_up_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "down_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "shared_gate_up_weight_grad"
+    },
+    {
+      "rank": 3,
+      "repeat": 2,
+      "tensor": "shared_down_weight_grad"
+    }
+  ]
+}

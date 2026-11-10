@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "own_pids": [
+    1919555,
+    1919556,
+    1919557,
+    1919558
+  ],
+  "foreign": [],
+  "samples": 24,
+  "interval_seconds": 0.4,
+  "scope": "entire process, including warmup and timed samples"
+}

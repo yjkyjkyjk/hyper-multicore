@@ -1,0 +1,210 @@
+{
+  "schema_version": 2,
+  "component_version": "0.1.0.dev0",
+  "artifact_version": "0.1.0.dev0+pt.2.7.1.post4",
+  "pta_version": "2.7.1.post4",
+  "torch_version": "2.7.1+cpu",
+  "op_plugin_version": "V2R7",
+  "torch_commit": "e2d141dbde55c2a4370fac5165b0561b6af4798b",
+  "torch_cxx11_abi": true,
+  "python_abi": "cp311",
+  "host_arch": "aarch64",
+  "soc_list": [
+    "ascend910b"
+  ],
+  "cann_root": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3",
+  "cann_version": "9.1.0-beta.3",
+  "cann_version_info": "Version=9.1.0-beta.3\nversion_dir=cann\nrequired_package_runtime_version=\">=8.5\"\nrequired_package_ge-executor_version=\">=8.5\"\nrequired_package_metadef_version=\">=8.5\"\nrequired_package_asc-devkit_version=\">=8.5\"\nrequired_package_bisheng-compiler_version=\">=8.5\"\ntimestamp=20260616_185108448\n",
+  "cann_version_sha256": "96b89464e3013fae123c364dd626e09ae9ed7c12e65898b1e7ad5737ea7a010b",
+  "dependency_lock_sha256": "9f745b82b4c5d8b8504ab40f204f5581bf008f9060a419100ad27d9719ec2ffe",
+  "build_commit": "54b0ea590f47f46f83c1018fbdabbb98756f8355",
+  "source_sha256": "adaba75ba2f924c36232b00ee0ce53e5afdd748d1aece06be83298bb53344452",
+  "framework_locations": {
+    "torch": "/home/yjk/.conda/envs/hp-megamoe-cann91/lib/python3.11/site-packages/torch",
+    "torch_npu": "/home/yjk/.conda/envs/hp-megamoe-cann91/lib/python3.11/site-packages/torch_npu"
+  },
+  "build_fingerprint": "29d844531f899f755da4c20f73ef3562459796e66185ed0c1c75dc6824eeef65",
+  "torch_release": "2.7.1",
+  "pta_release": "2.7.1",
+  "build_mode": "current",
+  "variants": [
+    {
+      "schema_version": 1,
+      "component_version": "0.1.0.dev0",
+      "artifact_version": "0.1.0.dev0+pt.2.7.1.post4",
+      "pta_version": "2.7.1.post4",
+      "torch_version": "2.7.1+cpu",
+      "op_plugin_version": "V2R7",
+      "torch_commit": "e2d141dbde55c2a4370fac5165b0561b6af4798b",
+      "torch_cxx11_abi": true,
+      "python_abi": "cp311",
+      "host_arch": "aarch64",
+      "soc_list": [
+        "ascend910b"
+      ],
+      "cann_root": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3",
+      "cann_version": "9.1.0-beta.3",
+      "cann_version_info": "Version=9.1.0-beta.3\nversion_dir=cann\nrequired_package_runtime_version=\">=8.5\"\nrequired_package_ge-executor_version=\">=8.5\"\nrequired_package_metadef_version=\">=8.5\"\nrequired_package_asc-devkit_version=\">=8.5\"\nrequired_package_bisheng-compiler_version=\">=8.5\"\ntimestamp=20260616_185108448\n",
+      "cann_version_sha256": "96b89464e3013fae123c364dd626e09ae9ed7c12e65898b1e7ad5737ea7a010b",
+      "dependency_lock_sha256": "9f745b82b4c5d8b8504ab40f204f5581bf008f9060a419100ad27d9719ec2ffe",
+      "build_commit": "54b0ea590f47f46f83c1018fbdabbb98756f8355",
+      "source_sha256": "adaba75ba2f924c36232b00ee0ce53e5afdd748d1aece06be83298bb53344452",
+      "framework_locations": {
+        "torch": "/home/yjk/.conda/envs/hp-megamoe-cann91/lib/python3.11/site-packages/torch",
+        "torch_npu": "/home/yjk/.conda/envs/hp-megamoe-cann91/lib/python3.11/site-packages/torch_npu"
+      },
+      "build_fingerprint": "29d844531f899f755da4c20f73ef3562459796e66185ed0c1c75dc6824eeef65",
+      "torch_release": "2.7.1",
+      "pta_release": "2.7.1",
+      "torch_so": "adapters/pt2.7.1.post4-29d844531f89/libhyper_multicore_torch.so",
+      "shmem_so": "adapters/pt2.7.1.post4-29d844531f89/hyper_multicore_shmem_torch.so",
+      "id": "pt2.7.1.post4-29d844531f89",
+      "native_build_identity": {
+        "build_commit": "54b0ea590f47f46f83c1018fbdabbb98756f8355",
+        "source_sha256": "adaba75ba2f924c36232b00ee0ce53e5afdd748d1aece06be83298bb53344452",
+        "build_fingerprint": "29d844531f899f755da4c20f73ef3562459796e66185ed0c1c75dc6824eeef65"
+      }
+    }
+  ],
+  "requested_target_ids": [
+    "pt2.7.1.post4-29d844531f89"
+  ],
+  "reference_cann": null,
+  "framework_lock_sha256": null,
+  "native_sha256": {
+    "shmem/lib/libhyper_multicore_shmem_ops.so": "c4bac986d3ee33e999e3a1f81ba2b38c776682044be040997a8bed5a8083d46f",
+    "shmem/lib/shmem/aclshmem_bootstrap_config_store.so": "40aac55d35a9211db775d10b1c328b331f40d31b439449b60eb971c5edf763c7",
+    "shmem/lib/shmem/libhyper_multicore_shmem.so": "b6372f9c9472313e24346833c1f65420f474bf4fac027d86341291b5d1a607a5",
+    "shmem/lib/shmem/aclshmem_bootstrap_uid.so": "f972e2be38713b13d323864d0e169853ace9d1b7acd5cdc5330cd13be7775c3c",
+    "shmem/lib/shmem/libhyper_multicore_shmem_utils.so": "1c0e004a2f70f756facb368033f6951b0ddfde0aee073fee75d0b2baac7d603a",
+    "adapters/pt2.7.1.post4-29d844531f89/hyper_multicore_shmem_torch.so": "c128d68c2614492bc8c93596c0c6fbd03fe4c86f8974d4a6bb082826614c1adf",
+    "adapters/pt2.7.1.post4-29d844531f89/libhyper_multicore_torch.so": "2053a1abe3553ae26fc580c1c4dcb2377c99671c82807c362d61dd76e291cd7d",
+    "lib/vendors/hyper_multicore_nn/op_api/lib/libcust_opapi.so": "7ec565df6ffe409540aee3829bac787e4928b48373edbc53a69085e6cccd8faf",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/op_tiling/liboptiling.so": "140bbb4011a122bc22481155514430f0391d87feb2c4429f555d552c2efffbe2",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64/libcust_opmaster_rt2.0.so": "140bbb4011a122bc22481155514430f0391d87feb2c4429f555d552c2efffbe2",
+    "lib/vendors/hyper_multicore_nn/op_proto/lib/linux/aarch64/libcust_opsproto_rt2.0.so": "20f8a022d76fc8508f0a555b1dec671e80688d293a7aadd9577e038eff06c9fc"
+  },
+  "payload_sha256": {
+    "adapters/manifest.json": "20dd431d594d2ac3237b47bcc5872a5fef09c1c72f394a3c0dd192226b3344f6",
+    "adapters/pt2.7.1.post4-29d844531f89/hyper_multicore_shmem_torch.so": "c128d68c2614492bc8c93596c0c6fbd03fe4c86f8974d4a6bb082826614c1adf",
+    "adapters/pt2.7.1.post4-29d844531f89/libhyper_multicore_torch.so": "2053a1abe3553ae26fc580c1c4dcb2377c99671c82807c362d61dd76e291cd7d",
+    "lib/set_env.bash": "6b64de855a4ecc37850ced958f202f29bd4630cfc47e976ec9eb0e3547e1f3ea",
+    "lib/vendors/hyper_multicore_nn/framework/tensorflow/npu_supported_ops.json": "0758e7d0710ebba7dfe83896fa900dd467d4e23e94ffceedbbc8318d76fe3b5b",
+    "lib/vendors/hyper_multicore_nn/op_api/include/aclnn_hyper_mega_gate_route.h": "e7c760a16ff91fe27272ddd1e28fc7ea53359ca3bf530785b8bee8c6762c408e",
+    "lib/vendors/hyper_multicore_nn/op_api/include/aclnn_hyper_mega_gate_route_grad.h": "a7154ee5bdd7c618068eadd9a130e1a62b34f5c5aea94c87175bec4da8253054",
+    "lib/vendors/hyper_multicore_nn/op_api/include/aclnn_hyper_mega_mhc.h": "c91b400732c32187f05d87bb4cf8cc27bf7db672108036d8a7bffd5871589ce1",
+    "lib/vendors/hyper_multicore_nn/op_api/include/aclnn_hyper_mega_mhc_grad.h": "c60d877aacce6c7d56e76917190556a1789d485f76fd3ebc91c273b4d455cf81",
+    "lib/vendors/hyper_multicore_nn/op_api/include/aclnn_hyper_mega_moe.h": "343f73851f784e1bb7ee56a83c4d2f7e366fd0646f99e1d29915715a5a86484f",
+    "lib/vendors/hyper_multicore_nn/op_api/include/aclnn_hyper_mega_moe_grad.h": "8faabcd45330d9cefb9e375cc1847177133b3e7876e4b7cf9c59ab32dce3b909",
+    "lib/vendors/hyper_multicore_nn/op_api/lib/libcust_opapi.so": "7ec565df6ffe409540aee3829bac787e4928b48373edbc53a69085e6cccd8faf",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/config/ascend910b/aic-ascend910b-ops-info.json": "4fb758aef6f775532080cec5fa3e82d8dab79ce64a3b7cbf5d183378ec0bba37",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_gate_route/HyperMegaGateRoute_51b3ed5fb437e5de2c66aff4a6043505.json": "c2c78b089144c9f5e295e4cc50881f9f34594b3d194293ae19bfcb4706e74921",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_gate_route/HyperMegaGateRoute_51b3ed5fb437e5de2c66aff4a6043505.o": "04f3472f86bf4bc8c79f6fdde546c5cf9f74b2cb151124d2c82f426acf9ee3fe",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_gate_route_grad/HyperMegaGateRouteGrad_303d12d6648a9fd322199a0a8d3ab5c0.json": "61ddb8b9979167d12c54508743c87420b697b2867a02f266a14640bd15689551",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_gate_route_grad/HyperMegaGateRouteGrad_303d12d6648a9fd322199a0a8d3ab5c0.o": "8166386047ddc9c9352d763ca99e12f7d1c652797ad45aedf6bfa59265e34a5e",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_mhc/HyperMegaMhc_433fc592441f7ac1b484cebbff756b75.json": "a0b2f67eb31c0accdb9c77a68967583b0d510e364dcd0ffaa2fe543070b06cd5",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_mhc/HyperMegaMhc_433fc592441f7ac1b484cebbff756b75.o": "bf1ab77c7c74f370d37eda5545013f20722a209070893e47783bb5f649e1a3b8",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_mhc_grad/HyperMegaMhcGrad_bf9c317a8a7bc83c9f4bed060af1a9cc.json": "42b7b448acc08f840d848e8005cc54e7d90333b6722f1a0912db13383e10c8fe",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_mhc_grad/HyperMegaMhcGrad_bf9c317a8a7bc83c9f4bed060af1a9cc.o": "4679864ab8df71c6474fd40deb406c4ce3d2bad8be3e6542332ca37bdb0cecf2",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_36b675f6e4e521b7bb1c18cf58839a74.json": "28bdba98a1d37b19824d647f3032ebae521145c765835704238b0e0b71c59510",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_36b675f6e4e521b7bb1c18cf58839a74.o": "2e5547a0d5e003ac538c5778bdc26eae132f3a74a406dd38987385bf3d10e8e4",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_7e1f97a19c0d73f2e1a41585321824cb.json": "018eea25d10231d1416baf2b75593a5f0332872d16ac0abbd09ce2464efc3507",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_7e1f97a19c0d73f2e1a41585321824cb.o": "541213f4fd0aae7c663d164608918341f2910ad3013295cd83650992b5418b86",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_427d7efcfe6f35058c9a50ee97ae10cb.json": "f9cb7cd8cd7a89d995620a504d63c5b202c0f06bfaa0fbad11c461052a903e3b",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_427d7efcfe6f35058c9a50ee97ae10cb.o": "3eb47b270f47b7ab41f0b7e05614ad945b2f8f5a6d52fac661f02c0d34071905",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_52b89ce802c59f45be5946dda710678d.json": "9a5845481486a0eec4c8d31395ed9204cf5c9112fcd29c4ed0990e6128788f52",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_52b89ce802c59f45be5946dda710678d.o": "df7524bf946cc4a3448123e6df8bba9f309800f077e1613204d8d8a401daa728",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/binary_info_config.json": "7774514e399974d3ffe2d241b365ad552dff7eea43176e6195d9b439a96be8d7",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/hyper_mega_gate_route.json": "25977d82770ea9c34e837665ac66152bee5584301147ae62f8bf4bedb5fba6c8",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/hyper_mega_gate_route_grad.json": "829b1eb59e2dd0c679a914783467c0a9da4d464ff8bd1325b8c2129983d93354",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/hyper_mega_mhc.json": "fea7499006e129621d8f7e3c354c3ff97d02b3d62d67cfbc2c1c75add01fcb76",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/hyper_mega_mhc_grad.json": "76edcc81896ef4b4608ad17bdbef43c86ae31df7a64abbe8fc83ce05214f7154",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/hyper_mega_moe.json": "b738e559573addc32aa714d4c7f7bf7059ff5d800276a35f893ee4abe2beaa7a",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/config/ascend910b/hyper_mega_moe_grad.json": "b8626c988eaf888414dfce0c22c521ed457e81e4db473e9bc4e92d9133d88dae",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64/libcust_opmaster_rt2.0.so": "140bbb4011a122bc22481155514430f0391d87feb2c4429f555d552c2efffbe2",
+    "lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/op_tiling/liboptiling.so": "140bbb4011a122bc22481155514430f0391d87feb2c4429f555d552c2efffbe2",
+    "lib/vendors/hyper_multicore_nn/op_proto/inc/op_proto.h": "5f77d70baf79ce89fab2f0c3291072d602fcea626a4dd00220e98ead5fe9b209",
+    "lib/vendors/hyper_multicore_nn/op_proto/lib/linux/aarch64/libcust_opsproto_rt2.0.so": "20f8a022d76fc8508f0a555b1dec671e80688d293a7aadd9577e038eff06c9fc",
+    "lib/vendors/hyper_multicore_nn/version.info": "49d9a06c026d6bc2704dd4a3ea02e7672ff25870b7dbb00ccc7da0affcabd2bd",
+    "shmem/lib/libhyper_multicore_shmem_ops.so": "c4bac986d3ee33e999e3a1f81ba2b38c776682044be040997a8bed5a8083d46f",
+    "shmem/lib/shmem/aclshmem_bootstrap_config_store.so": "40aac55d35a9211db775d10b1c328b331f40d31b439449b60eb971c5edf763c7",
+    "shmem/lib/shmem/aclshmem_bootstrap_uid.so": "f972e2be38713b13d323864d0e169853ace9d1b7acd5cdc5330cd13be7775c3c",
+    "shmem/lib/shmem/libhyper_multicore_shmem.so": "b6372f9c9472313e24346833c1f65420f474bf4fac027d86341291b5d1a607a5",
+    "shmem/lib/shmem/libhyper_multicore_shmem_utils.so": "1c0e004a2f70f756facb368033f6951b0ddfde0aee073fee75d0b2baac7d603a"
+  },
+  "vendor_sources": [
+    {
+      "soc": "ascend910b",
+      "origin": {
+        "build_commit": "54b0ea590f47f46f83c1018fbdabbb98756f8355",
+        "source_sha256": "adaba75ba2f924c36232b00ee0ce53e5afdd748d1aece06be83298bb53344452",
+        "environment": {
+          "cann_root": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3",
+          "cann_version_info": "Version=9.1.0-beta.3\nversion_dir=cann\nrequired_package_runtime_version=\">=8.5\"\nrequired_package_ge-executor_version=\">=8.5\"\nrequired_package_metadef_version=\">=8.5\"\nrequired_package_asc-devkit_version=\">=8.5\"\nrequired_package_bisheng-compiler_version=\">=8.5\"\ntimestamp=20260616_185108448\n",
+          "tools": {
+            "bisheng": {
+              "path": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/tools/bisheng_compiler/bin/bisheng",
+              "sha256": "ed64b2aef9617980c6a919dd14735860e97a9da34d6eec308409e6b8d096e175"
+            },
+            "asc_opc": {
+              "path": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/aarch64-linux/bin/asc_opc",
+              "sha256": "4400fcf5a7628e549787f84852ad54680bc5ff2217a02e17a76a24be4ba3bf2c"
+            },
+            "gcc": {
+              "path": "/usr/bin/gcc",
+              "sha256": "0a6df5fc2a54c03359f8051e7d13bc1466f78ee12a9aa014678a4ac0de872ce4"
+            },
+            "g++": {
+              "path": "/usr/bin/g++",
+              "sha256": "1cede9fed264c56a5a4550d2decc2d7cec90723e2e5520b80970dc86ff2263f3"
+            },
+            "ld": {
+              "path": "/usr/bin/ld",
+              "sha256": "663a54ebf722c582b7b67044fab523b793917adaee78b36ef380e2fe28fad12c"
+            },
+            "as": {
+              "path": "/usr/bin/as",
+              "sha256": "4e04fb2e3a71a9d509a9c89cede5602351b8245bf09a6d8c9263391111ed6df2"
+            },
+            "ar": {
+              "path": "/usr/bin/ar",
+              "sha256": "da616606b32a7ec5648c852660ee02e3a8e69e95045051f9ffbe7cc16b1cddeb"
+            },
+            "cmake": {
+              "path": "/usr/local/cmake-3.25.3/bin/cmake",
+              "sha256": "29f95c3d8b091d20b6a270a24a074a88e220d35d2a53deebf52642a2b3162b1f"
+            },
+            "make": {
+              "path": "/usr/bin/make",
+              "sha256": "6d0a6bce42e35c276d4f24d6329aa0ca059306bc81795dc580aaaef7b7e21824"
+            }
+          },
+          "environment": {
+            "PATH": "/home/yjk/.venvs/hyper-multicore-core-partition-20261110/bin:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/bin:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/tools/ccec_compiler/bin:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/tools/profiler/bin:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/tools/ascend_system_advisor/asys:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/tools/show_kernel_debug_data:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/tools/msobjdump:/home/yjk/.local/bin:/home/yjk/.local/bin:/home/yjk/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin",
+            "LD_LIBRARY_PATH": "/home/yjk/.conda/envs/hp-megamoe-cann91/lib:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/lib64:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/lib64/plugin/opskernel:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/lib64/plugin/nnengine:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/opp/built-in/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver",
+            "PYTHONPATH": "/home/yjk/workspace/hyper-multicore-core-partition-20261110:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/python/site-packages:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/opp/built-in/op_impl/ai_core/tbe::/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/python/site-packages:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/opp/built-in/op_impl/ai_core/tbe",
+            "ASCEND_HOME_PATH": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3",
+            "CC": "",
+            "CXX": "",
+            "CFLAGS": "",
+            "CXXFLAGS": "",
+            "CPPFLAGS": "",
+            "LDFLAGS": "",
+            "CMAKE_BUILD_TYPE": "",
+            "CMAKE_GENERATOR": "",
+            "CMAKE_PREFIX_PATH": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/toolkit/tools/tikicpulib/lib/cmake:/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/lib64/cmake",
+            "CPATH": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3/pkg_inc/base",
+            "C_INCLUDE_PATH": "",
+            "CPLUS_INCLUDE_PATH": "",
+            "LIBRARY_PATH": ""
+          },
+          "python": {
+            "path": "/home/yjk/.conda/envs/hp-megamoe-cann91/bin/python3.11",
+            "version": "3.11.15 (main, Mar 11 2026, 17:11:19) [GCC 14.3.0]"
+          }
+        }
+      },
+      "reused": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "backward_runtime_cases": 64,
+  "modes_each": 4,
+  "backward_images_byte_identical": true,
+  "tensor_kernels_executed": false
+}

@@ -1,0 +1,225 @@
+{
+  "baseline_commit": "45599d6be3aaf9b6d73178b14bf24dac028e6bfd",
+  "candidate_commit": "54b0ea590f47f46f83c1018fbdabbb98756f8355",
+  "warmup": 20,
+  "measured": 100,
+  "modes": {
+    "baseline_before": {
+      "metrics": {
+        "forward_event_ms": {
+          "median_ms": 14.936830043792725,
+          "mean_ms": 15.030480337142944,
+          "latency_change_pct": 0.0
+        },
+        "backward_event_ms": {
+          "median_ms": 18.122329711914062,
+          "mean_ms": 18.161023387908937,
+          "latency_change_pct": 0.0
+        },
+        "full_event_ms": {
+          "median_ms": 33.029890060424805,
+          "mean_ms": 33.133175735473635,
+          "latency_change_pct": 0.0
+        },
+        "full_sync_wall_ms": {
+          "median_ms": 33.22684997692704,
+          "mean_ms": 33.32052089041099,
+          "latency_change_pct": 0.0
+        }
+      },
+      "device_samples": 23
+    },
+    "vector": {
+      "metrics": {
+        "forward_event_ms": {
+          "median_ms": 15.014690399169922,
+          "mean_ms": 15.240874872207641,
+          "latency_change_pct": 0.5212642518454214
+        },
+        "backward_event_ms": {
+          "median_ms": 18.05344009399414,
+          "mean_ms": 18.09925271987915,
+          "latency_change_pct": -0.3801366546963947
+        },
+        "full_event_ms": {
+          "median_ms": 33.07061004638672,
+          "mean_ms": 33.2293444442749,
+          "latency_change_pct": 0.12328223281221629
+        },
+        "full_sync_wall_ms": {
+          "median_ms": 33.30520004965365,
+          "mean_ms": 33.48326630424708,
+          "latency_change_pct": 0.23580349260015065
+        }
+      },
+      "device_samples": 25
+    },
+    "cube": {
+      "metrics": {
+        "forward_event_ms": {
+          "median_ms": 15.918789863586426,
+          "mean_ms": 16.000118198394777,
+          "latency_change_pct": 6.574084440371419
+        },
+        "backward_event_ms": {
+          "median_ms": 17.965490341186523,
+          "mean_ms": 18.01251302719116,
+          "latency_change_pct": -0.8654481693070037
+        },
+        "full_event_ms": {
+          "median_ms": 33.93840026855469,
+          "mean_ms": 34.01263111114502,
+          "latency_change_pct": 2.750569882212317
+        },
+        "full_sync_wall_ms": {
+          "median_ms": 34.10453500691801,
+          "mean_ms": 34.18627122184262,
+          "latency_change_pct": 2.641493342283252
+        }
+      },
+      "device_samples": 24
+    },
+    "both": {
+      "metrics": {
+        "forward_event_ms": {
+          "median_ms": 15.868540287017822,
+          "mean_ms": 16.05242159843445,
+          "latency_change_pct": 6.237670513043603
+        },
+        "backward_event_ms": {
+          "median_ms": 17.966400146484375,
+          "mean_ms": 18.03456281661987,
+          "latency_change_pct": -0.8604278142405497
+        },
+        "full_event_ms": {
+          "median_ms": 33.85458946228027,
+          "mean_ms": 34.08286556243897,
+          "latency_change_pct": 2.4968275714716714
+        },
+        "full_sync_wall_ms": {
+          "median_ms": 34.016605000942945,
+          "mean_ms": 34.25074219936505,
+          "latency_change_pct": 2.3768579464027217
+        }
+      },
+      "device_samples": 25
+    },
+    "baseline_after": {
+      "metrics": {
+        "forward_event_ms": {
+          "median_ms": 14.969490051269531,
+          "mean_ms": 15.121308155059815,
+          "latency_change_pct": 0.21865420829620952
+        },
+        "backward_event_ms": {
+          "median_ms": 18.12895965576172,
+          "mean_ms": 18.143071212768554,
+          "latency_change_pct": 0.03658439037943495
+        },
+        "full_event_ms": {
+          "median_ms": 33.101409912109375,
+          "mean_ms": 33.20963428497314,
+          "latency_change_pct": 0.2165306985694837
+        },
+        "full_sync_wall_ms": {
+          "median_ms": 33.30859006382525,
+          "mean_ms": 33.43491259030998,
+          "latency_change_pct": 0.2460061274390135
+        }
+      },
+      "device_samples": 25
+    }
+  },
+  "precision": {
+    "precision_pull_small_both": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_pull_small_vector": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_representative_baseline": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_representative_both": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_representative_cube": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_representative_vector": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_small_baseline": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_small_both": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_small_cube": {
+      "passed": true,
+      "tensor_checks": 84
+    },
+    "precision_small_vector": {
+      "passed": true,
+      "tensor_checks": 84
+    }
+  },
+  "cross_binary": 84,
+  "memory": {
+    "baseline": {
+      "baseline_allocated": 585131520,
+      "baseline_reserved": 2392850432,
+      "peak_allocated": 2311492608,
+      "peak_reserved": 2392850432,
+      "peak_allocated_increment": 1726361088,
+      "current_allocated": 1081633792,
+      "current_reserved": 2392850432,
+      "shmem_heap": 673185792
+    },
+    "vector": {
+      "baseline_allocated": 585131520,
+      "baseline_reserved": 2392850432,
+      "peak_allocated": 2311492608,
+      "peak_reserved": 2392850432,
+      "peak_allocated_increment": 1726361088,
+      "current_allocated": 1081633792,
+      "current_reserved": 2392850432,
+      "shmem_heap": 673185792
+    },
+    "cube": {
+      "baseline_allocated": 585131520,
+      "baseline_reserved": 2392850432,
+      "peak_allocated": 2311492608,
+      "peak_reserved": 2392850432,
+      "peak_allocated_increment": 1726361088,
+      "current_allocated": 1081633792,
+      "current_reserved": 2392850432,
+      "shmem_heap": 673185792
+    },
+    "both": {
+      "baseline_allocated": 585131520,
+      "baseline_reserved": 2392850432,
+      "peak_allocated": 2311492608,
+      "peak_reserved": 2392850432,
+      "peak_allocated_increment": 1726361088,
+      "current_allocated": 1081633792,
+      "current_reserved": 2392850432,
+      "shmem_heap": 673185792
+    }
+  },
+  "native_objects": {
+    "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_36b675f6e4e521b7bb1c18cf58839a74.o": "2e5547a0d5e003ac538c5778bdc26eae132f3a74a406dd38987385bf3d10e8e4",
+    "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_7e1f97a19c0d73f2e1a41585321824cb.o": "541213f4fd0aae7c663d164608918341f2910ad3013295cd83650992b5418b86",
+    "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_427d7efcfe6f35058c9a50ee97ae10cb.o": "3eb47b270f47b7ab41f0b7e05614ad945b2f8f5a6d52fac661f02c0d34071905",
+    "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_52b89ce802c59f45be5946dda710678d.o": "df7524bf946cc4a3448123e6df8bba9f309800f077e1613204d8d8a401daa728"
+  },
+  "wheel_sha256": "256a3167975920c4a08e3ef396d90372ace5e7ff993a02557ca5f3c266a4113e"
+}

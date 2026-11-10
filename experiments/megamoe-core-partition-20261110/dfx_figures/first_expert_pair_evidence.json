@@ -1,0 +1,46 @@
+[
+  {
+    "rank": 0,
+    "owners": [
+      "0",
+      "1"
+    ],
+    "second_expert_start_delay_us": 20.600000000000136,
+    "first_expert_completion_delay_us": 560.5599999999997,
+    "both_second_expert_max_wait_us": 1020.66,
+    "both_overlap_us": 418.8799999999999
+  },
+  {
+    "rank": 1,
+    "owners": [
+      "8",
+      "9"
+    ],
+    "second_expert_start_delay_us": 142.05999999999995,
+    "first_expert_completion_delay_us": 487.0799999999999,
+    "both_second_expert_max_wait_us": 1122.74,
+    "both_overlap_us": 369.67999999999984
+  },
+  {
+    "rank": 2,
+    "owners": [
+      "16",
+      "17"
+    ],
+    "second_expert_start_delay_us": 173.41999999999985,
+    "first_expert_completion_delay_us": 594.2600000000002,
+    "both_second_expert_max_wait_us": 1020.66,
+    "both_overlap_us": 379.6600000000001
+  },
+  {
+    "rank": 3,
+    "owners": [
+      "24",
+      "25"
+    ],
+    "second_expert_start_delay_us": 24.700000000000045,
+    "first_expert_completion_delay_us": 532.0600000000002,
+    "both_second_expert_max_wait_us": 1020.68,
+    "both_overlap_us": 386.31999999999994
+  }
+]

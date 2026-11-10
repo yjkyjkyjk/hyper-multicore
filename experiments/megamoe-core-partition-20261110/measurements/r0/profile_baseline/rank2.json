@@ -1,0 +1,134 @@
+{
+  "mode": "baseline",
+  "phase": "profile",
+  "trial": "r0",
+  "rank": 2,
+  "warmup": 10,
+  "measured": 50,
+  "provenance": {
+    "repo": "/home/yjk/workspace/hyper-multicore-core-partition-20261110",
+    "commit": "54b0ea590f47f46f83c1018fbdabbb98756f8355",
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "untracked_source_sha256": {},
+    "native_objects": {
+      "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_36b675f6e4e521b7bb1c18cf58839a74.o": "2e5547a0d5e003ac538c5778bdc26eae132f3a74a406dd38987385bf3d10e8e4",
+      "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe/HyperMegaMoe_7e1f97a19c0d73f2e1a41585321824cb.o": "541213f4fd0aae7c663d164608918341f2910ad3013295cd83650992b5418b86",
+      "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_427d7efcfe6f35058c9a50ee97ae10cb.o": "3eb47b270f47b7ab41f0b7e05614ad945b2f8f5a6d52fac661f02c0d34071905",
+      "build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn/op_impl/ai_core/tbe/kernel/ascend910b/hyper_mega_moe_grad/HyperMegaMoeGrad_52b89ce802c59f45be5946dda710678d.o": "df7524bf946cc4a3448123e6df8bba9f309800f077e1613204d8d8a401daa728"
+    },
+    "python": "/home/yjk/.venvs/hyper-multicore-core-partition-20261110/bin/python",
+    "torch": "2.7.1+cpu",
+    "device": "Ascend910B3",
+    "device_limits": {
+      "cube_core_num": 20,
+      "vector_core_num": 40
+    },
+    "cann_root": "/home/yjk/Ascend-9.1.0-beta.3/cann-9.1.0-beta.3",
+    "vendor": "/home/yjk/workspace/hyper-multicore-core-partition-20261110/build/native/payload/hyper_multicore/lib/vendors/hyper_multicore_nn",
+    "visible_devices": "0,1,2,3",
+    "shape": {
+      "local_num_tokens": 4096,
+      "hidden_size": 5120,
+      "intermediate_size": 1792,
+      "num_experts": 32,
+      "top_k": 8,
+      "ep_size": 4
+    },
+    "shared_intermediate_size": 1792,
+    "dtype": "bfloat16",
+    "dispatch_mode": "push",
+    "all_six_fusion_switches": true,
+    "training": true,
+    "backward_schedule_changed": false,
+    "input_seed": 30002,
+    "weight_seed": 99175,
+    "route": "make_balanced_route",
+    "capacity_factor": 1.5
+  },
+  "result": {
+    "passed": true,
+    "trace": "/home/yjk/workspace/results/hyper-multicore-core-partition-20261110/measurements/r0/profile_baseline/rank2_trace.json",
+    "metadata": {
+      "schemaVersion": 1,
+      "windowIndex": 0,
+      "anchorCycle": 90871754047719,
+      "invocationCount": 2,
+      "recordCount": 20538,
+      "droppedRecordCount": 0,
+      "detailedTaskNames": true,
+      "invocations": [
+        {
+          "invocationId": 0,
+          "step": 0,
+          "direction": "forward",
+          "kernelName": "mega_moe",
+          "rank": 2,
+          "deviceId": 2,
+          "anchorCycle": 90871754047719,
+          "recordCount": 9095,
+          "droppedRecordCount": 0
+        },
+        {
+          "invocationId": 1,
+          "step": 0,
+          "direction": "backward",
+          "kernelName": "mega_moe",
+          "rank": 2,
+          "deviceId": 2,
+          "anchorCycle": 90871757396385,
+          "recordCount": 11443,
+          "droppedRecordCount": 0
+        }
+      ],
+      "warnings": []
+    },
+    "instrumented_not_a_latency_measurement": true,
+    "shared_expert": {
+      "forward": true,
+      "backward": true,
+      "external_reference": false
+    },
+    "route_fusion": {
+      "forward": "both",
+      "backward": "both"
+    },
+    "integration": {
+      "reuse_backward_dispatch": true,
+      "forward_shared_sum_in_kernel": true,
+      "backward_shared_sum_in_kernel": true,
+      "shared_weight_gradient_layout": "EOI"
+    },
+    "schedule": {
+      "forward": {
+        "total_tasks": 3721,
+        "aic_tasks": 360,
+        "aiv_tasks": 3361,
+        "runtime_bytes": 2216768,
+        "runtime_sha256": "086bd996942dc1ba253628884c9c3a62969aabf72912857cdc480eeaac4ce97f",
+        "header_hex": "880e000028000000900e0000000400003d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "task_index_counts": [
+          360,
+          3361,
+          0,
+          0
+        ],
+        "num_workers": 40
+      },
+      "backward": {
+        "total_tasks": 4497,
+        "aic_tasks": 720,
+        "aiv_tasks": 3777,
+        "runtime_bytes": 2677760,
+        "runtime_sha256": "f783ea90748732b720196edd2b96f06c1bcbba2cd2f181d1b09f6e87e7feca37",
+        "header_hex": "9111000028000000a0110000000400003e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "task_index_counts": [
+          720,
+          3777,
+          0,
+          0
+        ],
+        "num_workers": 40
+      }
+    }
+  }
+}

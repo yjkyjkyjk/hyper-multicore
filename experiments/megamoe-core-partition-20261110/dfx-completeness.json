@@ -1,0 +1,487 @@
+{
+  "passed": true,
+  "traces": 24,
+  "directional_checks": 48,
+  "checks": [
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 0,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 0,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 1,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 1,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 2,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 2,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 3,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_both",
+      "rank": 3,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 0,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 0,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 1,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 1,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 2,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 2,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 3,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_cube",
+      "rank": 3,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 0,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 0,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 1,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 1,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 2,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 2,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 3,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_baseline",
+      "rank": 3,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 0,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 0,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 1,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 1,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 2,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 2,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 3,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "measurements/r0/profile_vector",
+      "rank": 3,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 0,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 0,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 1,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 1,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 2,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 2,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 3,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/both",
+      "rank": 3,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 0,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 0,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 1,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 1,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 2,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 2,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 3,
+      "direction": "forward",
+      "tasks": 3721,
+      "aic": 360,
+      "aiv": 3361,
+      "dropped": 0,
+      "duplicate": 0
+    },
+    {
+      "capture": "monitored_profile/baseline",
+      "rank": 3,
+      "direction": "backward",
+      "tasks": 4497,
+      "aic": 720,
+      "aiv": 3777,
+      "dropped": 0,
+      "duplicate": 0
+    }
+  ]
+}
